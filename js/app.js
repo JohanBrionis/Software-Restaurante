@@ -114,8 +114,8 @@ function renderOrders() {
               <td>${sale.product}</td>
               <td>${sale.time}</td>
               <td>
-                  <button class="btn-deliver" data-id="${sale.id}">Entregar</button>
-                  <button class="btn-delete" data-id="${sale.id}">Eliminar</button>
+                  <button class="btn-deliver green" data-id="${sale.id}">Entregar</button>
+                  <button class="btn-delete red" data-id="${sale.id}">Eliminar</button>
               </td>
           `;
           tbody.appendChild(row);
