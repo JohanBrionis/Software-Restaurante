@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.Control {
+    margin-top: 20px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.Control h2 {
+    font-size: 16px;
+    color: #555;
+}
+
+.Control p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.Ultimos-pedidos {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.Ultimos-pedidos h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 5px;
+    text-align: center;
+    color: #333;
+}
+
+table th {
+    background-color: #f7f7f7;
+    color: #555;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.container-pedidos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.card {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 180px;
+    height: 180px;
+}
+
+.card h2 {
+    font-size: 25px; /* Adjusted size for better fit */
+    color: #333;
+    margin: 0; /* Remove margins */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 90%;
+    margin: 10px auto;
+    transition: background-color 0.3s ease;
+}
+
+#quitar {
+    background-color: #dc3545;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.action-buttons button {
+    border: solid 1px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.action-buttons button:hover {
+    background-color: #d3d0d061;
+}
+
+.action-buttons .btn-entregado {
+    color: #28a745; /* Verde para indicar pedido entregado */
+}
+
+.action-buttons .btn-eliminar {
+    color: #dc3545; /* Rojo para eliminar pedido */
+}
+
+/* Mejorar la responsividad */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .Control h2 {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .card h2 {
+        font-size: 18px; /* Adjusted for smaller screens */
+    }
+}

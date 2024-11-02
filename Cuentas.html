@@ -1,52 +1,161 @@
 <!doctype html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/Styles/Style-general.css" type="text/css" media="all" />
-        <title>Cuentas - Software Restauran</title>
-    </head>
-    <body>
-        <main>
-            <div class="container">
-                <!-- Primer Contenedor: Resumen de Ventas -->
-                <div class="Control">
-                    <h2>Almuerzos vendidos:</h2>
-                    <p id="almuerzos">29</p>
-                    
-                    <h2>Sopas vendidas:</h2>
-                    <p id="sopas">20</p>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Styles/Style-cuentas.css" type="text/css" media="all" />
+    <title>Cuentas - Software Restauran</title>
+    <style>
+        /* Contenedor principal */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
 
-                    <h2>Total de dinero recogido:</h2>
-                    <p id="total-dinero">$261,000</p> <!-- Total calculado como ejemplo (29 * 9000) -->
+        /* Sección de control y agrupación */
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #333;
+            padding: 0 10px;
+            font-size: 1.2em;
+        }
+
+        /* Estilo de las etiquetas y textos */
+        h2, h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        p {
+            font-size: 1em;
+            color: #333;
+            margin: 5px 0 15px;
+        }
+
+        /* Input fields styling */
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        input[type="number"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* Estilo del botón */
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for list of sales items */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            padding: 10px;
+            background: #eef2f7;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        /* Nuevo total styling */
+        #nuevo-total {
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <!-- Primer Contenedor: Resumen de Ventas -->
+            <fieldset>
+                <legend>Resumen de Ventas</legend>
+                <h2>Almuerzos vendidos:</h2>
+                <p id="almuerzos">0</p>
+
+                <h2>Sopas vendidas:</h2>
+                <p id="sopa">0</p>
+
+                <h2>Total de dinero recogido:</h2>
+                <span id="total-dinero">$0</span><br>
+                <a href="Index.html">Volver al inicio</a>
+            </fieldset>
+
+            <!-- Segundo Contenedor: Calcular sobre Total Recogido -->
+            <fieldset>
+                <legend>Calcular sobre Total Recogido</legend>
+                
+                <div class="input-group">
+                    <input type="number" id="amount-sumar" placeholder="Monto a sumar" />
+                    <button id="btn-sumar">Sumar</button>
                 </div>
 
-                <!-- Segundo Contenedor: Calcular sobre Total Recogido -->
-                <div class="Control">
-                    <h2>Calcular sobre total recogido</h2>
-                    
-                    <label for="gasto">Meter gasto:</label>
-                    <input type="number" id="gasto" placeholder="Ingresar monto a restar" />
-
-                    <label for="dinero">Meter dinero:</label>
-                    <input type="number" id="dinero" placeholder="Ingresar monto a sumar" />
-
-                    <h3>Nuevo Total:</h3>
-                    <p id="nuevo-total">$261,000</p> <!-- Simulado, sin cálculos aún -->
+                <div class="input-group">
+                    <input type="number" id="amount-restar" placeholder="Monto a restar" />
+                    <button id="btn-restar">Restar</button>
                 </div>
+                <br>
+                <h3>Nuevo Total:</h3>
+                <p id="nuevo-total">$0</p> <!-- Cambiado para ser consistente -->
+            </fieldset>
 
-                <!-- Tercer Contenedor: Inventario de Ventas -->
-                <div class="Ultimos-pedidos">
-                    <h2>Inventario de Ventas</h2>
-                    <ul>
-                        <li>$5,000 - Sopa</li>
-                        <li>$9,000 - Pollo</li>
-                        <li>$12,000 - Carne Asada</li>
-                        <li>$9,000 - Almuerzo</li>
-                        <!-- Más ventas se pueden agregar aquí -->
-                    </ul>
-                </div>
-            </div>
-        </main>
-    </body>
+            <!-- Tercer Contenedor: Inventario de Ventas -->
+            <fieldset>
+                <legend>Inventario de Ventas</legend>
+                <ul>
+                    <li>$5,000 - Sopa</li>
+                    <li>$9,000 - Pollo</li>
+                    <li>$12,000 - Carne Asada</li>
+                    <li>$9,000 - Almuerzo</li>
+                </ul>
+            </fieldset>
+        </div>
+    </main>
+
+    <script src="/js/app.js"></script>
+</body>
 </html>
