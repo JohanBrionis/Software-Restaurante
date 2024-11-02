@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/Styles/Style-general.css" type="text/css" media="all" />
+        <title>Cuentas - Software Restauran</title>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <!-- Primer Contenedor: Resumen de Ventas -->
+                <div class="Control">
+                    <h2>Almuerzos vendidos:</h2>
+                    <p id="almuerzos">29</p>
+                    
+                    <h2>Sopas vendidas:</h2>
+                    <p id="sopas">20</p>
+
+                    <h2>Total de dinero recogido:</h2>
+                    <p id="total-dinero">$261,000</p> <!-- Total calculado como ejemplo (29 * 9000) -->
+                </div>
+
+                <!-- Segundo Contenedor: Calcular sobre Total Recogido -->
+                <div class="Control">
+                    <h2>Calcular sobre total recogido</h2>
+                    
+                    <label for="gasto">Meter gasto:</label>
+                    <input type="number" id="gasto" placeholder="Ingresar monto a restar" />
+
+                    <label for="dinero">Meter dinero:</label>
+                    <input type="number" id="dinero" placeholder="Ingresar monto a sumar" />
+
+                    <h3>Nuevo Total:</h3>
+                    <p id="nuevo-total">$261,000</p> <!-- Simulado, sin cálculos aún -->
+                </div>
+
+                <!-- Tercer Contenedor: Inventario de Ventas -->
+                <div class="Ultimos-pedidos">
+                    <h2>Inventario de Ventas</h2>
+                    <ul>
+                        <li>$5,000 - Sopa</li>
+                        <li>$9,000 - Pollo</li>
+                        <li>$12,000 - Carne Asada</li>
+                        <li>$9,000 - Almuerzo</li>
+                        <!-- Más ventas se pueden agregar aquí -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="/Styles/Style-general.css"
+            type="text/css"
+            media="all"
+        />
+        <title>Inicio - Software Restauran</title>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="flex-container">
+                    <h1>Pedidos</h1>
+                    <div class="Control">
+                        <h2>
+                            Almuerzos vendidos:
+                            <p id="almuerzos">29</p>
+                        </h2>
+                        <h2>
+                            Sopa vendida:
+                            <p id="sopa">20.000 Mil</p>
+                        </h2>
+                    </div>
+
+                    <div class="Ultimos-pedidos">
+                        <h2>Últimos Pedidos</h2>
+                        <table border="1" cellspacing="0" cellpadding="8">
+                            <thead>
+                                <tr>
+                                    <th>Número de Pedido</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Pollo</td>
+                                    <td>2</td>
+                                    <td>12:30 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Sopa</td>
+                                    <td>1</td>
+                                    <td>12:45 PM</td>
+                                </tr>
+                                <!-- Puedes añadir más filas aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pedidos">
+                        <div class="container-pedidos">
+                            <div class="card">
+                                <h2>Pollo</h2>
+                                <img src="/path/to/icon-pollo.png" alt="Icono Pollo" />
+                                <button id="add" type="submit">Añadir Pollo</button>
+                                <button type="submit" id="quitar">Quitar Pollo</button>
+                            </div>
+
+                            <div class="card">
+                                <h2>Sopa</h2>
+                                <img src="/path/to/icon-sopa.png" alt="Icono Sopa" />
+                                <button id="add" type="submit">Añadir Sopa</button>
+                                <button type="submit" id="quitar">Quitar Sopa</button>
+                            </div>
+
+                            <div class="card">
+                                <h2>Ensalada</h2>
+                                <img src="/path/to/icon-ensalada.png" alt="Icono Ensalada" />
+                                <button id="add" type="submit">Añadir Ensalada</button>
+                                <button type="submit" id="quitar">Quitar Ensalada</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
