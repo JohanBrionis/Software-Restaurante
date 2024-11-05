@@ -13,55 +13,62 @@ body {
 }
 
 .container {
-    max-width: 480px;
+    max-width: 1200px; /* Aumentamos el tamaño máximo para pantallas grandes */
     width: 100%;
-    padding: 20px;
+    padding: 40px; /* Mayor padding para darle espacio al contenido */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los elementos */
 }
 
 h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 36px; /* Mayor tamaño de fuente */
     color: #333;
-    margin-bottom: 20px;
+    width: 100%; /* Ocupa toda la fila */
+    margin-bottom: 30px;
 }
 
 .Control {
+    flex: 1; /* Permite que ocupe espacio flexible en pantallas grandes */
+    min-width: 300px;
+    max-width: 600px; /* Limite de tamaño */
     margin-top: 20px;
     background-color: #fff;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
 .Control h2 {
-    font-size: 16px;
+    font-size: 20px; /* Ajustado para pantallas grandes */
     color: #555;
 }
 
 .Control p {
-    font-size: 22px;
+    font-size: 26px; /* Mayor tamaño de fuente */
     font-weight: bold;
     color: #333;
     margin-top: 5px;
 }
 
 .Ultimos-pedidos {
+    flex: 2; /* Ocupa más espacio */
+    min-width: 300px;
     background-color: #fff;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
 .Ultimos-pedidos h2 {
-    font-size: 18px;
+    font-size: 24px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -72,7 +79,7 @@ table {
 
 table th,
 table td {
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     color: #333;
 }
@@ -89,44 +96,42 @@ table tr:nth-child(even) {
 .container-pedidos {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    gap: 5px;
+    gap: 15px;
+    justify-content: space-evenly; /* Mejor alineación */
 }
 
 .card {
-    display: flex;
-    cursor: pointer;
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    margin: 0 auto;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    width: 180px;
-    height: 180px;
+    width: 220px; /* Ajustado para pantallas grandes */
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .card h2 {
-    font-size: 25px; /* Adjusted size for better fit */
+    font-size: 28px;
     color: #333;
-    margin: 0; /* Remove margins */
-    overflow: hidden; /* Prevent overflow */
-    text-overflow: ellipsis; /* Show ellipsis for overflow */
-    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card img {
-    width: 60px;
-    height: 60px;
+    width: 80px; /* Imagen más grande */
+    height: 80px;
     margin-bottom: 10px;
 }
 
 button {
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 18px; /* Tamaño ajustado */
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -140,13 +145,13 @@ button {
     background-color: #dc3545;
 }
 
-.green{
+.green {
     background-color: green;
 }
 
 .action-buttons {
     display: flex;
-    gap: 5px;
+    gap: 10px; /* Mayor espacio entre botones */
     justify-content: center;
 }
 
@@ -162,28 +167,29 @@ button {
 }
 
 .action-buttons .btn-entregado {
-    color: #28a745; /* Verde para indicar pedido entregado */
+    color: #28a745;
 }
 
 .action-buttons .btn-eliminar {
-    color: #dc3545; /* Rojo para eliminar pedido */
+    color: #dc3545;
 }
 
-/* Mejorar la responsividad */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 20px;
+/* Responsivo para tamaños grandes */
+@media (min-width: 1024px) {
+    .container {
+        padding: 60px; /* Padding adicional */
     }
 
-    .Control h2 {
-        font-size: 14px;
+    h1 {
+        font-size: 40px;
+    }
+
+    .Control h2,
+    .Control p {
+        font-size: 24px;
     }
 
     button {
-        font-size: 14px;
-    }
-
-    .card h2 {
-        font-size: 18px; /* Adjusted for smaller screens */
+        font-size: 20px;
     }
 }
